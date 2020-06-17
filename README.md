@@ -1,5 +1,6 @@
 # ccda-validator-docker
-Docker file for ccda-validator
+Docker file for [ccda-validator](https://github.com/onc-healthit/reference-ccda-validator)
+
 
 # Tomcat Docker variables
 ENV CATALINA_HOME /usr/local/tomcat
