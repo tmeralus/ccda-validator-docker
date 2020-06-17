@@ -14,6 +14,9 @@ path/to/validator_configuration: /opt/ccda
 b. path/to/validator_configuration/vocabulary/valueset_repository/VSAC/
 c. path/to/validator_configuration/scenarios/
 
+# Container tomcat validator_configuration
+ Conf dir: usr/local/tomcat/conf 
+ Log dir: /usr/local/tomcat/logs
 
 . Start your tomcat instance - you should see output showing the databases getting initialized and the .war file getting deployed.
     NOTE: Allow a few moments for the vocabulary valuesets and codes to be inserted into the in-memory database.

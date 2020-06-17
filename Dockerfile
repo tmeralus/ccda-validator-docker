@@ -34,21 +34,22 @@ COPY content-validator-api /opt/ccda/vocab/scenarios/
 COPY configuration/referenceccdaservice.xml /opt/ccda/referenceccdaservice.xml
 COPY reference-ccda-validator/configuration/ccdaReferenceValidatorConfig.xml /opt/ccda
 
-COPY configuration/referenceccdaservice.xml $CATALINA_BASE/conf/[enginename]/[hostname]/
-COPY code-validator-api /opt/
+#COPY configuration/referenceccdaservice.xml $CATALINA_BASE/conf/[enginename]/[hostname]/
+#COPY code-validator-api /opt/
+ADD 2015-certification-ccda-testdata /opt/ccda/vocab/scenarios/
 
 # download the needed war file
 #RUN wget https://github.com/onc-healthit/reference-ccda-validator/releases/download/1.0.45/referenceccdaservice.war
 
 # copy war file to tomcat webapps dir
-COPY referenceccdaservice.war /apache-tomcat-7.0.57/webapps
+COPY referenceccdaservice.war /usr/local/tomcat//webapps
 
 # copy references.xml to Catalina/localhost dir
-COPY configuration/referenceccdaservice.xml /apache-tomcat-7.0.53/conf/Catalina/localhost/
+COPY configuration/referenceccdaservice.xml /usr/local/tomcat/conf/Catalina/localhost/
 
 COPY code-validator-api/codevalidator-api/docs/ValueSetsHandCreatedbySITE/ /opt/ccda/vocab/valueset_repository/VSAC/
 
-#RUN chown -R tomcat:tomcat /opt/ccda
+#RUN chown -R tomcat:tomcat /usr/local/tomcat/conf/Catalina/localhost/referenceccdaservice.xml
 
 EXPOSE 8080
 WORKDIR $CATALINA_HOME
