@@ -24,7 +24,7 @@ jobs:
 
     # Build out docker container
     - name: build docker container
-      run: docker build --name=validator .
+      run: docker build --tag=validator .
 
     # Deploy docker container if finished successfully 
     - name: Run new image
