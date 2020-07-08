@@ -36,13 +36,13 @@ run: cd 2015-certification-ccda-testdata && git pull
 #  working-directory: .
 #  run: cd 2015-certification-ccda-testdata && git pull
 
-  wget:
-    runs-on: ubuntu-18.04
-    steps:
-    - name: wget
-      uses: actions/checkout@v2
-      with:
-        args: -o referenceccdaservice.war https://github.com/onc-healthit/reference-ccda-validator/releases/download/1.0.46/referenceccdaservice.war
+wget:
+  runs-on: ubuntu-18.04
+  steps:
+  - name: wget
+    uses: actions/checkout@v2
+    with:
+      args: -o referenceccdaservice.war https://github.com/onc-healthit/reference-ccda-validator/releases/download/1.0.46/referenceccdaservice.war
 
   # This workflow contains a job called "build"
   build:
