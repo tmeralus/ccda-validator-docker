@@ -23,21 +23,21 @@ jobs:
     - uses: actions/checkout@v2
       
  # Update repos used in docker file 
-    - name: Update git repos 
-      run: | 
-        git clone https://github.com/onc-healthit/reference-ccda-validator.git \ 
-        git clone https://github.com/onc-healthit/content-validator-api.git \ 
-        git clone https://github.com/onc-healthit/2015-certification-ccda-testdata.git \ 
-        git clone https://github.com/onc-healthit/code-validator-api.git
+#    - name: Update git repos 
+#      run: | 
+#        git clone https://github.com/onc-healthit/reference-ccda-validator.git \ 
+#        git clone https://github.com/onc-healthit/content-validator-api.git \ 
+#        git clone https://github.com/onc-healthit/2015-certification-ccda-testdata.git \ 
+#        git clone https://github.com/onc-healthit/code-validator-api.git
 
  # Update repos used in docker file 
-#    - name: Update git repos 
-#      working-directory: .
-#      run: | 
-#        cd reference-ccda-validator && git pull \ 
-#        cd content-validator-api && git pull  \ 
-#        cd 2015-certification-ccda-testdata && git pull \ 
-#        cd code-validator-api git pull 
+    - name: Update git repos 
+      working-directory: .
+      run: | 
+        cd reference-ccda-validator && git pull \ 
+        cd content-validator-api && git pull  \ 
+        cd 2015-certification-ccda-testdata && git pull \ 
+        cd code-validator-api git pull 
 
 
     # Build out docker container
