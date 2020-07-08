@@ -22,19 +22,19 @@ jobs:
 # run: cd 2015-certification-ccda-testdata && git pull
 
  # Update content-validator-api repo used in docker file
-  name: Update content-validator-api repo
-  working-directory: .
-  run: cd content-validator-api && git pull
+  - name: Update content-validator-api repo
+    working-directory: .
+    run: cd content-validator-api && git pull
 
  # Update code-validator-api repo used in docker file
-  name: Update code-validator-api repo
-  working-directory: .
-  run: cd code-validator-api && git pull
+  - name: Update code-validator-api repo
+    working-directory: .
+    run: cd code-validator-api && git pull
 
  # Update 2015-certification-ccda-testdata repo used in docker file
-  name: Update 2015-certification-ccda-testdata repo
-  working-directory: .
-  run: cd 2015-certification-ccda-testdata && git pull
+  - name: Update 2015-certification-ccda-testdata repo
+    working-directory: .
+    run: cd 2015-certification-ccda-testdata && git pull
 
   wget:
     runs-on: ubuntu-18.04
