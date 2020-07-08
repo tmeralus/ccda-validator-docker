@@ -12,6 +12,14 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+# Get the latest .war file
+  wget:  
+    steps:
+    - name: wget
+      uses: actions/checkout@v2
+      with:
+        args: -o referenceccdaservice.war https://github.com/onc-healthit/reference-ccda-validator/releases/download/1.0.46/referenceccdaservice.war
+
   # This workflow contains a job called "build"
   build:
     # The type of runner that the job will run on
@@ -22,13 +30,6 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-#    - name: Get the latest .war file
-  wget:  Get the latest .war file
-    steps:
-    - name: wget
-      uses: actions/checkout@v2
-      with:
-        args: https://github.com/onc-healthit/reference-ccda-validator/releases/download/1.0.46/referenceccdaservice.war
 
  # Update repos used in docker file
 #    - name: Update git repos
