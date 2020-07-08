@@ -43,7 +43,7 @@ jobs:
  # Update code-validator-api repo used in docker file 
     - name: Update code-validator-api repo 
       working-directory: .
-      run: cd code-validator-api git pull  
+      run: cd code-validator-api && git pull  
 
  # Update 2015-certification-ccda-testdata repo used in docker file 
     - name: Update 2015-certification-ccda-testdata repo
