@@ -14,30 +14,35 @@ RUN mkdir -p /opt/ccda/vocab/code_repository
 RUN mkdir -p /opt/ccda/vocab/scenarios
 RUN mkdir -p /opt/ccda/vocab/valueset_repository
 RUN mkdir -p /opt/ccda/vocab/valueset_repository/VSAC
+RUN mkdir -p /etc/tomcat/Catalina/localhost
+
 #Set working directory
 WORKDIR /opt/ccda
 
-# download latest ccda-validator from github
-# https://github.com/onc-healthit/reference-ccda-validator
 RUN apt-get update
 RUN apt-get install -y git
+
+# Copy validator-api xlsx's
+COPY code-validator-api/codevalidator-api/docs/ValueSetsHandCreatedbySITE/*.xlsx /opt/ccda/vocab/valueset_repository/VSAC/
 
 # Copy all configs
 COPY content-validator-api /opt/ccda/vocab/scenarios/
 COPY configuration/referenceccdaservice.xml /opt/ccda/referenceccdaservice.xml
 COPY reference-ccda-validator/configuration/ccdaReferenceValidatorConfig.xml /opt/ccda
 
-#COPY configuration/referenceccdaservice.xml $CATALINA_BASE/conf/[enginename]/[hostname]/
-#COPY code-validator-api /opt/
 ADD 2015-certification-ccda-testdata /opt/ccda/vocab/scenarios/
+
+# copy web.xml file to tomcat dir
+COPY configuration/web.xml /etc/tomcat/web.xml
 
 # copy war file to tomcat webapps dir
 COPY referenceccdaservice.war /usr/local/tomcat/webapps
+COPY referenceccdaservice.war /var/lib/tomcat/webapps/referenceccdaservice.war
 
-# copy references.xml to Catalina/localhost dir
-COPY configuration/referenceccdaservice.xml /usr/local/tomcat/conf/Catalina/localhost/
+# reference file may need to go into a different dir
+COPY configuration/referenceccdaservice.xml /etc/tomcat/Catalina/localhost/referenceccdaservice.xml
+COPY configuration/referenceccdaservice.xml /usr/local/tomcat/conf/Catalina/localhost/referenceccdaservice.xml
 
-COPY code-validator-api/codevalidator-api/docs/ValueSetsHandCreatedbySITE/ /opt/ccda/vocab/valueset_repository/VSAC/
 
 EXPOSE 8080
 WORKDIR $CATALINA_HOME

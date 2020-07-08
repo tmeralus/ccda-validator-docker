@@ -1,0 +1,12 @@
+errors in container
+
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'contentValida
+torService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.Un
+satisfiedDependencyException: Error creating bean with name 'refModelHashMap' defined in org.sitenv.contentvalid
+ator.configuration.ContentValidatorApiConfiguration: Unsatisfied dependency expressed through constructor argume
+nt with index 0 of type [org.sitenv.contentvalidator.configuration.ScenarioLoader]: : Error creating bean with n
+ame 'scenarioLoader' defined in org.sitenv.contentvalidator.configuration.ContentValidatorApiConfiguration: Invo
+cation of init method failed; nested exception is java.lang.NullPointerException; nested exception is org.spring
+framework.beans.factory.BeanCreationException: Error creating bean with name 'scenarioLoader' defined in org.sit
+env.contentvalidator.configuration.ContentValidatorApiConfiguration: Invocation of init method failed; nested ex
+ception is java.lang.NullPointerException
