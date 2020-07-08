@@ -13,6 +13,26 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
 # Get the latest .war file
+ # Update reference-ccda-validator repo used in docker file
+  name: Update  reference-ccda-validator repo
+  working-directory: .
+  run: cd reference-ccda-validator && git pull
+
+ # Update content-validator-api repo used in docker file
+  name: Update content-validator-api repo
+  working-directory: .
+  run: cd content-validator-api && git pull
+
+ # Update code-validator-api repo used in docker file
+  name: Update code-validator-api repo
+  working-directory: .
+  run: cd code-validator-api && git pull
+
+ # Update 2015-certification-ccda-testdata repo used in docker file
+  name: Update 2015-certification-ccda-testdata repo
+  working-directory: .
+  run: cd 2015-certification-ccda-testdata && git pull
+
   wget:
     runs-on: ubuntu-18.04
     steps:
