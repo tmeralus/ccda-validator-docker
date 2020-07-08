@@ -15,11 +15,11 @@ jobs:
 # Get the latest .war file
  # Update reference-ccda-validator repo used in docker file
 #- name: Update  reference-ccda-validator repo
-  working-directory: .
-  run: cd reference-ccda-validator && git pull
-  run: cd content-validator-api && git pull
-  run: cd code-validator-api && git pull
-  run: cd 2015-certification-ccda-testdata && git pull
+working-directory: .
+run: cd reference-ccda-validator && git pull
+run: cd content-validator-api && git pull
+run: cd code-validator-api && git pull
+run: cd 2015-certification-ccda-testdata && git pull
 
  # Update content-validator-api repo used in docker file
 #  name: Update content-validator-api repo
