@@ -34,7 +34,7 @@ jobs:
     run: cd 2015-certification-ccda-testdata && git pull
 
   - wget:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-18.04 # The type of runner that the job will run on
     steps:
     - name: wget
       uses: actions/checkout@v2
@@ -42,10 +42,8 @@ jobs:
         args: -o referenceccdaservice.war https://github.com/onc-healthit/reference-ccda-validator/releases/download/1.0.46/referenceccdaservice.war
 
   # This workflow contains a job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-18.04
-
+  - build:
+    runs-on: ubuntu-18.04 # The type of runner that the job will run on
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
