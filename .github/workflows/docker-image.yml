@@ -36,8 +36,8 @@ jobs:
       run: | 
         cd reference-ccda-validator && git pull \ 
         cd content-validator-api && git pull  \ 
-        cd 2015-certification-ccda-testdata && git pull \ 
         cd code-validator-api git pull 
+#        cd 2015-certification-ccda-testdata && git pull \ 
 
 
     # Build out docker container
