@@ -12,7 +12,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
+  # This workflow contains a job called "build"
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-18.04
@@ -21,11 +21,29 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+      
+ # Update repos used in docker file 
+    - name: Update git repos 
+      run: | 
+        git clone https://github.com/onc-healthit/reference-ccda-validator.git \ 
+        git clone https://github.com/onc-healthit/content-validator-api.git \ 
+        git clone https://github.com/onc-healthit/2015-certification-ccda-testdata.git \ 
+        git clone https://github.com/onc-healthit/code-validator-api.git
+
+ # Update repos used in docker file 
+#    - name: Update git repos 
+#      working-directory: .
+#      run: | 
+#        cd reference-ccda-validator && git pull \ 
+#        cd content-validator-api && git pull  \ 
+#        cd 2015-certification-ccda-testdata && git pull \ 
+#        cd code-validator-api git pull 
+
 
     # Build out docker container
     - name: build docker container
       run: docker build --tag=validator .
-
+            
     # Deploy docker container if finished successfully 
     - name: Run new image
       run: docker run -d --tag=validator --port 8080z;8080 validator
