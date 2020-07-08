@@ -12,14 +12,11 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-# Get the latest .war file
+  
  # Update reference-ccda-validator repo used in docker file
-#- name: Update  reference-ccda-validator repo
-#working-directory: .
-# run: cd reference-ccda-validator && git pull
-# run: cd content-validator-api && git pull
-# run: cd code-validator-api && git pull
-# run: cd 2015-certification-ccda-testdata && git pull
+  - name: Update reference-ccda-validator  repo
+    working-directory: .
+    run: cd reference-ccda-validator  && git pull
 
  # Update content-validator-api repo used in docker file
   - name: Update content-validator-api repo
