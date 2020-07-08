@@ -34,7 +34,7 @@ jobs:
     run: cd 2015-certification-ccda-testdata && git pull
 
   - wget:
-    runs-on: ubuntu-18.04 # The type of runner that the job will run on
+    runs-on: ubuntu-18.04
     steps:
     - name: wget
       uses: actions/checkout@v2
@@ -42,12 +42,46 @@ jobs:
         args: -o referenceccdaservice.war https://github.com/onc-healthit/reference-ccda-validator/releases/download/1.0.46/referenceccdaservice.war
 
   # This workflow contains a job called "build"
-  - build:
-    runs-on: ubuntu-18.04 # The type of runner that the job will run on
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-18.04
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+
+ # Update reference-ccda-validator repo used in docker file
+    - name: Update  reference-ccda-validator repo
+      working-directory: .
+      run: cd reference-ccda-validator && git pull
+
+ # Update content-validator-api repo used in docker file
+    - name: Update content-validator-api repo
+      working-directory: .
+      run: cd content-validator-api && git pull
+
+ # Update code-validator-api repo used in docker file
+    - name: Update code-validator-api repo
+      working-directory: .
+      run: cd code-validator-api && git pull
+
+ # Update 2015-certification-ccda-testdata repo used in docker file
+    - name: Update 2015-certification-ccda-testdata repo
+      working-directory: .
+      run: cd 2015-certification-ccda-testdata && git pull
+
+#    - name: Get the latest .war file
+#      working-directory: .
+#      run: wget https://github.com/onc-healthit/reference-ccda-validator/releases/download/1.0.46/referenceccdaservice.war
+
+#    - name: Get the latest .war file
+#    - wget:  Get the latest .war file
+#          steps:
+#          - name: wget
+#            uses: actions/checkout@v2
+#            with:
+#              args: https://github.com/onc-healthit/reference-ccda-validator/releases/download/1.0.46/referenceccdaservice.war
 
     # Build out docker container
     - name: build docker container
