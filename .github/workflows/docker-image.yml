@@ -23,12 +23,12 @@ jobs:
     - uses: actions/checkout@v2
 
 #    - name: Get the latest .war file
-    - wget:  Get the latest .war file
-          steps:
-          - name: wget
-            uses: actions/checkout@v2
-            with:
-              args: https://github.com/onc-healthit/reference-ccda-validator/releases/download/1.0.46/referenceccdaservice.war
+  wget:  Get the latest .war file
+    steps:
+    - name: wget
+      uses: actions/checkout@v2
+      with:
+        args: https://github.com/onc-healthit/reference-ccda-validator/releases/download/1.0.46/referenceccdaservice.war
 
  # Update repos used in docker file
 #    - name: Update git repos
