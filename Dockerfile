@@ -22,13 +22,6 @@ WORKDIR /opt/ccda
 RUN apt-get update
 RUN apt-get install -y git
 
-# clone ccda validator repo's
-#RUN cd /opt/ccda \
-#           git clone https://github.com/onc-healthit/reference-ccda-validator.git \
-#           git clone https://github.com/onc-healthit/content-validator-api.git \
-#           git clone https://github.com/onc-healthit/2015-certification-ccda-testdata.git \
-#           git clone https://github.com/onc-healthit/code-validator-api.git
-
 # Copy all configs
 COPY content-validator-api /opt/ccda/vocab/scenarios/
 COPY configuration/referenceccdaservice.xml /opt/ccda/referenceccdaservice.xml
@@ -38,18 +31,13 @@ COPY reference-ccda-validator/configuration/ccdaReferenceValidatorConfig.xml /op
 #COPY code-validator-api /opt/
 ADD 2015-certification-ccda-testdata /opt/ccda/vocab/scenarios/
 
-# download the needed war file
-#RUN wget https://github.com/onc-healthit/reference-ccda-validator/releases/download/1.0.45/referenceccdaservice.war
-
 # copy war file to tomcat webapps dir
-COPY referenceccdaservice.war /usr/local/tomcat//webapps
+COPY referenceccdaservice.war /usr/local/tomcat/webapps
 
 # copy references.xml to Catalina/localhost dir
 COPY configuration/referenceccdaservice.xml /usr/local/tomcat/conf/Catalina/localhost/
 
 COPY code-validator-api/codevalidator-api/docs/ValueSetsHandCreatedbySITE/ /opt/ccda/vocab/valueset_repository/VSAC/
-
-#RUN chown -R tomcat:tomcat /usr/local/tomcat/conf/Catalina/localhost/referenceccdaservice.xml
 
 EXPOSE 8080
 WORKDIR $CATALINA_HOME
