@@ -31,22 +31,22 @@ jobs:
 #        git clone https://github.com/onc-healthit/2015-certification-ccda-testdata.git \ 
 
  # Update reference-ccda-validator repo used in docker file 
-    - name: Update git repos 
+    - name: Update  reference-ccda-validator repo
       working-directory: .
       run: cd reference-ccda-validator && git pull   
 
  # Update content-validator-api repo used in docker file 
-    - name: Update git repos 
+    - name: Update content-validator-api repo
       working-directory: .
       run: cd content-validator-api && git pull    
 
  # Update code-validator-api repo used in docker file 
-    - name: Update git repos 
+    - name: Update code-validator-api repo 
       working-directory: .
       run: cd code-validator-api git pull  
 
  # Update 2015-certification-ccda-testdata repo used in docker file 
-    - name: Update git repos 
+    - name: Update 2015-certification-ccda-testdata repo
       working-directory: .
       run: cd 2015-certification-ccda-testdata && git pull   
         
