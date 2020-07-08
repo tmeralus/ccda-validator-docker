@@ -50,9 +50,16 @@ jobs:
       working-directory: .
       run: cd 2015-certification-ccda-testdata && git pull
 
+#    - name: Get the latest .war file
+#      working-directory: .
+#      run: wget https://github.com/onc-healthit/reference-ccda-validator/releases/download/1.0.46/referenceccdaservice.war
+
     - name: Get the latest .war file
-      working-directory: .
-      run: wget https://github.com/onc-healthit/reference-ccda-validator/releases/download/1.0.46/referenceccdaservice.war
+    - wget:
+          steps:
+          - name: wget
+            with:
+              args: https://github.com/onc-healthit/reference-ccda-validator/releases/download/1.0.46/referenceccdaservice.war
 
     # Build out docker container
     - name: build docker container
