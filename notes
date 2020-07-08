@@ -1,4 +1,8 @@
 errors in container
+test links
+http://localhost:8080/referenceccdaservice/static/validationui.html
+https://172.17.0.2:8080/referenceccdaservice/static/validationui.html
+
 
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'contentValida
 torService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.Un
