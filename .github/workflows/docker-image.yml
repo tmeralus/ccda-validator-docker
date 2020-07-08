@@ -36,10 +36,11 @@ jobs:
   - wget:
     runs-on: ubuntu-18.04
     steps:
-    - name: wget
+    - name: wget referenceccdaservice.war
       uses: actions/checkout@v2
       with:
-        args: -o referenceccdaservice.war https://github.com/onc-healthit/reference-ccda-validator/releases/download/1.0.46/referenceccdaservice.war
+        args: https://github.com/onc-healthit/reference-ccda-validator/releases/download/1.0.46/referenceccdaservice.war
+#        args: -o referenceccdaservice.war https://github.com/onc-healthit/reference-ccda-validator/releases/download/1.0.46/referenceccdaservice.war
 
   build:
     # The type of runner that the job will run on
