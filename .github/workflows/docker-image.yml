@@ -15,34 +15,34 @@ jobs:
 # Get the latest .war file
  # Update reference-ccda-validator repo used in docker file
 #- name: Update  reference-ccda-validator repo
-run: cd reference-ccda-validator && git pull
-run: cd content-validator-api && git pull
-run: cd code-validator-api && git pull
-run: cd 2015-certification-ccda-testdata && git pull
-working-directory: .
+#working-directory: .
+# run: cd reference-ccda-validator && git pull
+# run: cd content-validator-api && git pull
+# run: cd code-validator-api && git pull
+# run: cd 2015-certification-ccda-testdata && git pull
 
  # Update content-validator-api repo used in docker file
-#  name: Update content-validator-api repo
-#  working-directory: .
-#  run: cd content-validator-api && git pull
+  name: Update content-validator-api repo
+  working-directory: .
+  run: cd content-validator-api && git pull
 
  # Update code-validator-api repo used in docker file
-#  name: Update code-validator-api repo
-#  working-directory: .
-#  run: cd code-validator-api && git pull
+  name: Update code-validator-api repo
+  working-directory: .
+  run: cd code-validator-api && git pull
 
  # Update 2015-certification-ccda-testdata repo used in docker file
-#  name: Update 2015-certification-ccda-testdata repo
-#  working-directory: .
-#  run: cd 2015-certification-ccda-testdata && git pull
+  name: Update 2015-certification-ccda-testdata repo
+  working-directory: .
+  run: cd 2015-certification-ccda-testdata && git pull
 
-wget:
-  runs-on: ubuntu-18.04
-  steps:
-  - name: wget
-    uses: actions/checkout@v2
-    with:
-      args: -o referenceccdaservice.war https://github.com/onc-healthit/reference-ccda-validator/releases/download/1.0.46/referenceccdaservice.war
+  wget:
+    runs-on: ubuntu-18.04
+    steps:
+    - name: wget
+      uses: actions/checkout@v2
+      with:
+        args: -o referenceccdaservice.war https://github.com/onc-healthit/reference-ccda-validator/releases/download/1.0.46/referenceccdaservice.war
 
   # This workflow contains a job called "build"
   build:
