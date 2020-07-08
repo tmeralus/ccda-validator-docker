@@ -58,6 +58,7 @@ jobs:
     - wget:
           steps:
           - name: wget
+            uses: actions/checkout@v2
             with:
               args: https://github.com/onc-healthit/reference-ccda-validator/releases/download/1.0.46/referenceccdaservice.war
 
