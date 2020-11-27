@@ -1,0 +1,10 @@
+version: '3'
+services:
+  ccda:
+    container_name: ccda
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+     #- ./data/jira:/var/atlassian/jira
+     - ./logs:/usr/local/tomcat/logs

@@ -1,0 +1,142 @@
+Nov 27, 2020 6:21:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version name:   Apache Tomcat/7.0.104
+Nov 27, 2020 6:21:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          May 7 2020 19:31:18 UTC
+Nov 27, 2020 6:21:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version number: 7.0.104.0
+Nov 27, 2020 6:21:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Linux
+Nov 27, 2020 6:21:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            5.4.0-53-generic
+Nov 27, 2020 6:21:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Nov 27, 2020 6:21:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             /usr/local/openjdk-8/jre
+Nov 27, 2020 6:21:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_252-b09
+Nov 27, 2020 6:21:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Nov 27, 2020 6:21:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         /usr/local/tomcat
+Nov 27, 2020 6:21:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         /usr/local/tomcat
+Nov 27, 2020 6:21:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+Nov 27, 2020 6:21:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Nov 27, 2020 6:21:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+Nov 27, 2020 6:21:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+Nov 27, 2020 6:21:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dignore.endorsed.dirs=
+Nov 27, 2020 6:21:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=/usr/local/tomcat
+Nov 27, 2020 6:21:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=/usr/local/tomcat
+Nov 27, 2020 6:21:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+Nov 27, 2020 6:21:44 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Loaded Apache Tomcat Native library [1.2.24] using APR version [1.6.5].
+Nov 27, 2020 6:21:44 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Nov 27, 2020 6:21:44 PM org.apache.catalina.core.AprLifecycleListener initializeSSL
+INFO: OpenSSL successfully initialized [OpenSSL 1.1.1d  10 Sep 2019]
+Nov 27, 2020 6:21:44 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-apr-8080"]
+Nov 27, 2020 6:21:44 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 565 ms
+Nov 27, 2020 6:21:44 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Nov 27, 2020 6:21:44 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.104
+Nov 27, 2020 6:21:44 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying deployment descriptor [/usr/local/tomcat/conf/Catalina/localhost/referenceccdaservice.xml]
+Nov 27, 2020 6:21:48 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 27, 2020 6:21:49 PM org.apache.catalina.core.StandardContext startInternal
+SEVERE: One or more listeners failed to start. Full details will be found in the appropriate container log file
+Nov 27, 2020 6:21:49 PM org.apache.catalina.core.StandardContext startInternal
+SEVERE: Context [/referenceccdaservice] startup failed due to previous errors
+Nov 27, 2020 6:21:49 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of deployment descriptor [/usr/local/tomcat/conf/Catalina/localhost/referenceccdaservice.xml] has finished in [5,184] ms
+Nov 27, 2020 6:21:49 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-8080"]
+Nov 27, 2020 6:21:49 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 5241 ms
+Nov 27, 2020 6:37:58 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Nov 27, 2020 6:37:58 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-apr-8080"]
+Nov 27, 2020 6:37:58 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Nov 27, 2020 6:37:58 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-apr-8080"]
+Nov 27, 2020 6:37:58 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-apr-8080"]
+Nov 27, 2020 6:38:17 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version name:   Apache Tomcat/7.0.104
+Nov 27, 2020 6:38:17 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          May 7 2020 19:31:18 UTC
+Nov 27, 2020 6:38:17 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version number: 7.0.104.0
+Nov 27, 2020 6:38:17 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Linux
+Nov 27, 2020 6:38:17 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            5.4.0-53-generic
+Nov 27, 2020 6:38:17 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Nov 27, 2020 6:38:17 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             /usr/local/openjdk-8/jre
+Nov 27, 2020 6:38:17 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_252-b09
+Nov 27, 2020 6:38:17 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Nov 27, 2020 6:38:17 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         /usr/local/tomcat
+Nov 27, 2020 6:38:17 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         /usr/local/tomcat
+Nov 27, 2020 6:38:17 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+Nov 27, 2020 6:38:17 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Nov 27, 2020 6:38:17 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+Nov 27, 2020 6:38:17 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+Nov 27, 2020 6:38:17 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dignore.endorsed.dirs=
+Nov 27, 2020 6:38:17 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=/usr/local/tomcat
+Nov 27, 2020 6:38:17 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=/usr/local/tomcat
+Nov 27, 2020 6:38:17 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+Nov 27, 2020 6:38:17 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Loaded Apache Tomcat Native library [1.2.24] using APR version [1.6.5].
+Nov 27, 2020 6:38:17 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Nov 27, 2020 6:38:17 PM org.apache.catalina.core.AprLifecycleListener initializeSSL
+INFO: OpenSSL successfully initialized [OpenSSL 1.1.1d  10 Sep 2019]
+Nov 27, 2020 6:38:17 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-apr-8080"]
+Nov 27, 2020 6:38:17 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 562 ms
+Nov 27, 2020 6:38:17 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Nov 27, 2020 6:38:17 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.104
+Nov 27, 2020 6:38:17 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying deployment descriptor [/usr/local/tomcat/conf/Catalina/localhost/referenceccdaservice.xml]
+Nov 27, 2020 6:38:21 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 27, 2020 6:38:22 PM org.apache.catalina.core.StandardContext startInternal
+SEVERE: One or more listeners failed to start. Full details will be found in the appropriate container log file
+Nov 27, 2020 6:38:22 PM org.apache.catalina.core.StandardContext startInternal
+SEVERE: Context [/referenceccdaservice] startup failed due to previous errors
+Nov 27, 2020 6:38:22 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of deployment descriptor [/usr/local/tomcat/conf/Catalina/localhost/referenceccdaservice.xml] has finished in [4,766] ms
+Nov 27, 2020 6:38:22 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-8080"]
+Nov 27, 2020 6:38:22 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 4811 ms
