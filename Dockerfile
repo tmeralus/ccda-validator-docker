@@ -25,7 +25,7 @@ RUN apt-get install -y git
 # Copy all configs
 COPY content-validator-api /opt/ccda/vocab/scenarios/
 COPY configuration/referenceccdaservice.xml /opt/ccda/referenceccdaservice.xml
-COPY reference-ccda-validator/configuration/ccdaReferenceValidatorConfig.xml /opt/ccda
+COPY configuration/ccdaReferenceValidatorConfig.xml /opt/ccda
 
 #COPY configuration/referenceccdaservice.xml $CATALINA_BASE/conf/[enginename]/[hostname]/
 #COPY code-validator-api /opt/
